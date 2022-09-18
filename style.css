@@ -1,0 +1,625 @@
+html {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #111111;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* 
+##    ##    ###    ##     ## ####  ######      ###    ######## ####  #######  ##    ##    
+###   ##   ## ##   ##     ##  ##  ##    ##    ## ##      ##     ##  ##     ## ###   ##    
+####  ##  ##   ##  ##     ##  ##  ##         ##   ##     ##     ##  ##     ## ####  ##    
+## ## ## ##     ## ##     ##  ##  ##   #### ##     ##    ##     ##  ##     ## ## ## ##    
+##  #### #########  ##   ##   ##  ##    ##  #########    ##     ##  ##     ## ##  ####    
+##   ### ##     ##   ## ##    ##  ##    ##  ##     ##    ##     ##  ##     ## ##   ###    
+##    ## ##     ##    ###    ####  ######   ##     ##    ##    ####  #######  ##    ##    
+*/
+#header {
+    position: fixed;
+    z-index: 1;
+    background-color: #ffffff;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    transition: all 0.5s ease;
+}
+
+#header.hide {
+    top: -92px;
+}
+
+.header-content {
+    display: flex;
+    position: relative;
+    padding: 20px 50px;
+    justify-content: space-around;
+}
+
+.nav-bar {
+    display: flex;
+    position: relative;
+    width: 60%;
+    justify-content: center;
+}
+
+.name-bar {
+    position: relative;
+    font: 'Poppins-bold';
+    font-weight: 600;
+    font-size: 30px;
+    height: 50px;
+    width: 20%;
+    line-height: 50px;
+}
+
+.link-bar {
+    display: flex;
+    position: relative;
+    width: 20%;
+    right: 0;
+    justify-content: right;
+    align-items: center;
+}
+
+/* 
+ ######   #######  ##    ## ######## ######## ##    ## ########    
+##    ## ##     ## ###   ##    ##    ##       ###   ##    ##       
+##       ##     ## ####  ##    ##    ##       ####  ##    ##       
+##       ##     ## ## ## ##    ##    ######   ## ## ##    ##       
+##       ##     ## ##  ####    ##    ##       ##  ####    ##       
+##    ## ##     ## ##   ###    ##    ##       ##   ###    ##       
+ ######   #######  ##    ##    ##    ######## ##    ##    ##       
+*/
+.content-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.padded {
+    padding: 0px 100px;
+}
+
+.line {
+    height: 2px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.purple {
+   background-color: #713aa8;
+}
+
+.header-space {
+    height: 90px;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.vh80 {
+    height: 80vh;
+}
+
+.vh50 {
+    height: 50vh;
+}
+
+.vh20 {
+    height: 20vh;
+}
+
+.content-half-left {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content-half-right {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+img {
+    top: 0;
+    width: 100%;
+}
+
+/* 
+######## ######## ##     ## ########    
+   ##    ##        ##   ##     ##       
+   ##    ##         ## ##      ##       
+   ##    ######      ###       ##       
+   ##    ##         ## ##      ##       
+   ##    ##        ##   ##     ##       
+   ##    ######## ##     ##    ##       
+*/
+.home-textbox {
+    position: relative;
+    padding: 20px;
+    margin: 0% 10%;
+}
+
+.heading {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    padding: 15px 0px;
+}
+
+.sub-heading {
+    font-size: 32px;
+    line-height: 32px;
+    padding: 20px 0px 10px 0px;
+}
+
+.home-body {
+    font-size: 32px;
+}
+
+.home-textbox::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    border-left: 5px solid #713aa8;
+    border-bottom: 5px solid #713aa8;
+}
+
+.project-menu-textbox {
+    position: relative;
+    padding: 0px 50px;
+    height: 75%;
+    text-align: start;
+}
+
+.project-menu-heading {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.project-menu-body {
+    width: 100%;
+    margin: 20px 0px;
+    border-top: 1px solid #111111;
+    border-bottom: 1px solid #111111;
+}
+
+.project-title {
+    position: relative;
+    width: 50%;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.project-description {
+    width: 50%;
+    text-align: right;
+    font-size: 16px;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out 0.1s;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.full-length-body {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* 
+########  ##     ## ######## ########  #######  ##    ##  ######  
+##     ## ##     ##    ##       ##    ##     ## ###   ## ##    ## 
+##     ## ##     ##    ##       ##    ##     ## ####  ## ##       
+########  ##     ##    ##       ##    ##     ## ## ## ##  ######  
+##     ## ##     ##    ##       ##    ##     ## ##  ####       ## 
+##     ## ##     ##    ##       ##    ##     ## ##   ### ##    ## 
+########   #######     ##       ##     #######  ##    ##  ######  
+*/
+.button.nav-padding {
+    padding: 10px 20px 10px 20px;
+}
+
+.button {
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #111111;
+    cursor: pointer;
+    -webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.button.nav {
+    font-size: 20px;
+
+}
+
+.button:hover {
+    color: #713aa8;
+}
+
+.button.nav::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-bottom: 3px solid;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+.button.nav:hover::after {
+    transform: scaleX(1);
+}
+
+.project-button {
+    display: flex;
+    position: relative;
+    padding: 5px;
+    height: 80px;
+    align-items: center;
+    text-decoration: none;
+    color: #111111;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.project-button:hover {
+    background-color: rgba(113, 58, 168, 0.2);
+}
+
+.project-button:hover .project-description {
+    opacity: 1;
+}
+
+#CVLS:hover .project-preview {
+    background-image: url('media/favicon-32x32.png');
+}
+
+/* 
+ ######   #######   ######  ####    ###    ##          ##       #### ##    ## ##    ##  ######     
+##    ## ##     ## ##    ##  ##    ## ##   ##          ##        ##  ###   ## ##   ##  ##    ##    
+##       ##     ## ##        ##   ##   ##  ##          ##        ##  ####  ## ##  ##   ##          
+ ######  ##     ## ##        ##  ##     ## ##          ##        ##  ## ## ## #####     ######     
+      ## ##     ## ##        ##  ######### ##          ##        ##  ##  #### ##  ##         ##    
+##    ## ##     ## ##    ##  ##  ##     ## ##          ##        ##  ##   ### ##   ##  ##    ##    
+ ######   #######   ######  #### ##     ## ########    ######## #### ##    ## ##    ##  ######     
+*/
+.social-logo {
+    display: inline-block;
+    margin: 0px 0px 0px 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 32px;
+}
+
+.linkedin {
+    background-image: url('media/linkedin.png');
+    -webkit-transition: background-image 0.3s ease-in-out;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.github {
+    background-image: url('media/github.png');
+    -webkit-transition: background-image 0.3s ease-in-out;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.linkedin:hover {
+    background-image: url('media/linkedin_hover.png');
+    -webkit-transition: background-image 0.3s ease-in-out;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.github:hover {
+    background-image: url('media/github_hover.png');
+    -webkit-transition: background-image 0.3s ease-in-out;
+    transition: background-image 0.3s ease-in-out;
+}
+
+/* 
+#### ##     ##    ###     ######   ########  ######     
+ ##  ###   ###   ## ##   ##    ##  ##       ##    ##    
+ ##  #### ####  ##   ##  ##        ##       ##          
+ ##  ## ### ## ##     ## ##   #### ######    ######     
+ ##  ##     ## ######### ##    ##  ##             ##    
+ ##  ##     ## ##     ## ##    ##  ##       ##    ##    
+#### ##     ## ##     ##  ######   ########  ######     
+*/
+
+.home-img {
+    position: relative;
+    top: 90px;
+    width: 50vw;
+    object-fit: cover;
+}
+
+.project-preview {
+    position: relative;
+    background-color:#111111;
+    background-image: url('media/sanctuaries.jpg');
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    height: 100vh;
+    width: 50vw;
+}
+
+.img-box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.fill-img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* 
+##     ## ##     ##  ######  ####  ######     
+###   ### ##     ## ##    ##  ##  ##    ##    
+#### #### ##     ## ##        ##  ##          
+## ### ## ##     ##  ######   ##  ##          
+##     ## ##     ##       ##  ##  ##          
+##     ## ##     ## ##    ##  ##  ##    ##    
+##     ##  #######   ######  ####  ######     
+*/
+
+.home-img .music {
+    object-position: center;
+}
+.album {
+    display: flex;
+    position: relative;
+    height: 350px;
+    width: 350px;
+    margin: 50px;
+    box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.album:hover {
+    opacity: 0.7;
+}
+
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 100px 100px 100px;
+    height: 100%;
+    width: 80vw;
+}
+
+/* 
+##    ##    ###    ########  ########  ########  ######## ########     
+##   ##    ## ##   ##     ## ##     ## ##     ## ##       ##     ##    
+##  ##    ##   ##  ##     ## ##     ## ##     ## ##       ##     ##    
+#####    ##     ## ########  ##     ## ##     ## ######   ########     
+##  ##   ######### ##   ##   ##     ## ##     ## ##       ##   ##      
+##   ##  ##     ## ##    ##  ##     ## ##     ## ##       ##    ##     
+##    ## ##     ## ##     ## ########  ########  ######## ##     ##    
+*/
+
+.gold {
+    background-color:  rgba(214, 172, 96, 1);
+}
+
+.logo-img {
+    width: 400px;
+}
+
+.description-textbox {
+    position: relative;
+    padding: 50px;
+}
+
+.subtext {
+    font-size: 16px;
+    padding: 10px 0px 0px 0px;
+}
+
+.description-body {
+    font-size: 20px;
+}
+
+.display-img {
+    width: 250px;
+    margin: 0px 25px;
+    object-fit: contain;
+}
+
+.border {
+    border: 9px solid #000000;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.25);
+}
+
+.screenshot-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    margin: 0px 50px 50px 50px;
+    padding: 5px;
+    border: 1px #111111 solid;
+    border-radius: 15px;
+}
+
+.screenshot-img {
+    height: 65vh;
+    width: auto;
+}
+
+.gold {
+    background-color: rgba(214, 172, 96, 1);
+}
+
+.tutorial-container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    height: 60vh;
+    align-items: center;
+}
+
+.tutorial-button {
+    height: 50px;
+    width: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* 
+########  ########  ######  ########    ###    ########   ######  ##     ##    
+##     ## ##       ##    ## ##         ## ##   ##     ## ##    ## ##     ##    
+##     ## ##       ##       ##        ##   ##  ##     ## ##       ##     ##    
+########  ######    ######  ######   ##     ## ########  ##       #########    
+##   ##   ##             ## ##       ######### ##   ##   ##       ##     ##    
+##    ##  ##       ##    ## ##       ##     ## ##    ##  ##    ## ##     ##    
+##     ## ########  ######  ######## ##     ## ##     ##  ######  ##     ##    
+*/
+
+.stimulus-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.stimulus-img-cell {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+}
+
+.stimulus-img {
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+    margin: 20px 20px 0px 20px;
+}
+
+.inan {
+    border: 10px #EC7C30 solid;
+    border-radius: 10px;
+}
+
+.soc {
+    border: 10px #4471C6 solid;
+    border-radius: 10px;
+}
+
+.caption {
+    display: inline-block;
+    font-size: auto;
+    height: 20px;
+    font-weight: 600;
+    text-align: center;
+    bottom: 0;
+}
+
+.graph {
+    width: 40vw;
+    height: auto;
+}
+
+.task-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-img {
+    margin: 10px;
+    height: 40vh;
+    width: auto;
+}
+
+.discrim-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* 
+########  ########  ######  ##     ## ##     ## ######## 
+##     ## ##       ##    ## ##     ## ###   ### ##       
+##     ## ##       ##       ##     ## #### #### ##       
+########  ######    ######  ##     ## ## ### ## ######   
+##   ##   ##             ## ##     ## ##     ## ##       
+##    ##  ##       ##    ## ##     ## ##     ## ##       
+##     ## ########  ######   #######  ##     ## ######## 
+*/
+
+.resume-content-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resume-container {
+    display: block;
+    width: 60vw;
+}
