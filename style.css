@@ -116,19 +116,19 @@ main {
 }
 
 .vh100 {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .vh80 {
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .vh50 {
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .vh20 {
-    height: 20vh;
+    min-height: 20vh;
 }
 
 .content-half-left {
