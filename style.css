@@ -136,7 +136,7 @@ main {
 .content-half-left {
     display: flex;
     position: relative;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 50%;
     height: 100%;
     float: left;
@@ -148,7 +148,7 @@ main {
 .content-half-right {
     display: flex;
     position: relative;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 50%;
     height: 100%;
     float: right;
@@ -160,6 +160,20 @@ main {
 img {
     top: 0;
     width: 100%;
+}
+
+.box {
+    display: block;
+    position: absolute;
+    left: 67px;
+    top: 70%;
+    width: 100%;
+}
+
+iframe {
+    display: block;
+    height: 70%;
+    width: 50%;
 }
 
 /* 
@@ -328,6 +342,24 @@ ul {
     background-image: url('media/favicon-32x32.png');
 }
 
+.link-button {
+    display: block;
+    position: relative;
+    clear: left;
+    border-color: #713aa8;
+    border-width: 10px;
+    height: 50px;
+    width: 150px;
+    margin: 10px 0px 10px 0px;
+    line-height: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.link-button:hover {
+    color: #713aa8;
+}
+
 /* 
  ######   #######   ######  ####    ###    ##          ##       #### ##    ## ##    ##  ######     
 ##    ## ##     ## ##    ##  ##    ## ##   ##          ##        ##  ###   ## ##   ##  ##    ##    
@@ -477,7 +509,9 @@ ul {
 }
 
 .description-body {
+    position: relative;
     font-size: 20px;
+    width: 100%;
 }
 
 .display-img {
